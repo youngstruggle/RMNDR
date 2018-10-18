@@ -1,0 +1,165 @@
+html,body {
+	height: 100%;
+	background-attachment: fixed;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+	float: left;
+	background: url(../images/bg.jpg) no-repeat left center;
+	height: 100%;
+}
+
+.sidebar-menu {
+	width: 16.8%;
+	height: 100%;
+	float: left;
+	background: #313539;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+.content-hotel {
+	width: 80%;
+	padding: 0px;
+	margin-left: 20%;
+	color: #fff;
+}
+
+.side-in {
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 25px 0;
+}
+
+.side-in .logo {
+	margin: 5px 0
+}
+
+.side-menu {
+	width: 100%;
+	float: left;
+	margin: 15px 0;
+}
+
+.side-menu ul {
+	list-style: none;
+	margin-left: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.side-menu ul li {
+	display: block;
+}
+
+.side-menu ul li a {
+	padding-top:0.8em;
+	padding-right:0;
+	padding-left:2em;
+	padding-bottom:0.8em;
+	display: block;
+	border-bottom: 1px solid #686767;
+	text-decoration: none;
+	font-size: 1em;
+	color: #ffffff;
+	position: relative;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+}
+
+.side-menu ul li:first-child a {
+	border-top: 1px solid #686767;
+}
+
+.side-menu ul li a:after {
+	position: absolute;
+	right: 0px;
+	width: 2px;
+	height: 100%;
+	background: #fff;
+	content: "";
+	top: 0px;
+	display: none;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+}
+
+.side-menu ul li a:hover {
+	color: #fff;
+}
+
+.side-menu ul li a:hover:after {
+	display: block;
+}
+
+.social-icon {
+	width: 100%;
+	float: left;
+	margin-top: 15px;
+}
+
+.social-icon a {
+	margin: 5px;
+}
+
+.content-hotel h1 {
+	margin: 0px;
+	padding: 0px 20px;
+	font: 400 50px/60px "Arial";
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	padding: 50px 0 0 0
+}
+
+.content-hotel img {
+	max-width: 100%;
+}
+
+.content-hotel h2 {
+	margin: 0px;
+	padding: 0px 20px;
+	font: 400 30px/40px "Arial";
+	text-transform: capitalize;
+	color: #fff;
+	text-align: center;
+}
+
+.post-list {
+	width: 100%;
+	float: left;
+	margin-top: 200px;
+	background: #fff;
+	padding: 0px 0px;
+}
+
+.left-right {
+	width: 100%;
+	float: left;
+	background: #313539;
+}
+
+.left-right:nth-child(even) .left {
+	float: right;
+}
+
+.left-right .left {
+	width: 50%;
+	float: left;
+}
+
+.left-right .right {
+	width: 50%;
+	float: left;
+	padding: 3%;
+	color: #000;
+	background: #313539;
+	color: #fff;
+}
+

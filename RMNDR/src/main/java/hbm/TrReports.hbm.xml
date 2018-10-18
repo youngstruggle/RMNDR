@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 15, 2018 5:06:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping schema="dbo">
+	<class name="entities.TrReports" table="TR_REPORTS">
+		<id name="reportId" type="int">
+			<column name="report_id" />
+			<generator class="native" />
+		</id>
+		<property name="customer" type="string">
+			<column length="150" name="customer" />
+		</property>
+		<property name="project" type="string">
+			<column length="150" name="project" />
+		</property>
+		<property name="remarks" type="string">
+			<column length="50" name="remarks" />
+		</property>
+		<property name="noPo" type="string">
+			<column length="50" name="no_po" />
+		</property>
+		<property name="marketing" type="string">
+			<column length="50" name="marketing" />
+		</property>
+		<property name="noInvoice" type="string">
+			<column length="50" name="no_invoice" />
+		</property>
+		<property name="nomorPajak" type="string">
+			<column length="50" name="nomor_pajak" />
+		</property>
+		<property name="tanggalInvoice" type="timestamp">
+			<column length="26" name="tanggal_invoice" />
+		</property>
+		<property name="tanggalTt" type="timestamp">
+			<column length="26" name="tanggal_tt" />
+		</property>
+		<property name="term" type="java.lang.Integer">
+			<column name="term" />
+		</property>
+		<property name="tanggalJthTempo" type="timestamp">
+			<column length="26" name="tanggal_jth_tempo" />
+		</property>
+		<property name="piutangUsaha" type="java.lang.Long">
+			<column name="piutang_usaha" precision="18" scale="0" />
+		</property>
+		<property name="dpp" type="java.lang.Long">
+			<column name="dpp" precision="18" scale="0" />
+		</property>
+		<property name="ppn" type="java.lang.Long">
+			<column name="ppn" precision="18" scale="0" />
+		</property>
+		<property name="pph" type="java.lang.Long">
+			<column name="pph" precision="18" scale="0" />
+		</property>
+		<property name="uangMasuk" type="java.lang.Long">
+			<column name="uang_masuk" precision="18" scale="0" />
+		</property>
+		<property name="tanggalLunas" type="timestamp">
+			<column length="23" name="tanggal_lunas" />
+		</property>
+	</class>
+</hibernate-mapping>

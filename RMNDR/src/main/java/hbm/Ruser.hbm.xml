@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2018 9:50:59 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+	<class name="entities.Ruser" table="RUSER" catalog="MYREMINDER">
+		<id name="userId" type="string">
+			<column name="user_id" length="50" />
+			<generator class="uuid" />
+		</id>
+		<property name="username" type="string">
+			<column name="username" length="50" not-null="true" />
+		</property>
+		<property name="firstName" type="string">
+			<column name="first_name" length="50" not-null="true" />
+		</property>
+		<property name="lastName" type="string">
+			<column name="last_name" length="50" not-null="false" />
+		</property>
+		<property name="emailAddress" type="string">
+			<column name="email_address" length="50" not-null="true" />
+		</property>
+		<property name="division" type="string">
+			<column name="division" length="50" not-null="true" />
+		</property>
+		<property name="password" type="string">
+			<column name="password" length="50" not-null="true" />
+		</property>
+		<property name="role" type="string">
+			<column name="role" length="50" not-null="false" />
+		</property>
+	</class>
+</hibernate-mapping>

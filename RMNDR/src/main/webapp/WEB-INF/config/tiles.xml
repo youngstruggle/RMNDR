@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/template/mainTemplate.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp"></put-attribute>
+	</definition>
+
+	<!-- userformpage -->
+	<definition name="userformpage" extends="base.definition">
+		<put-attribute name="title" value="Create User Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/user/userformpage.jsp"></put-attribute>
+	</definition>
+
+	<!-- usereditform -->
+	<definition name="usereditform" extends="base.definition">
+		<put-attribute name="title" value="Edit User Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/user/usereditform.jsp"></put-attribute>
+	</definition>
+
+	<!-- userlistpage -->
+	<definition name="userlistpage" extends="base.definition">
+		<put-attribute name="title" value="User List"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/user/userlistpage.jsp"></put-attribute>
+	</definition>
+	
+	<!-- customerformpage -->
+	<definition name="customerformpage" extends="base.definition">
+		<put-attribute name="title" value="Customer Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/customer/customerformpage.jsp"></put-attribute>
+	</definition>
+
+	<!-- customereditform --> 
+	<definition name="customereditpage" extends="base.definition">
+		<put-attribute name="title" value="Edit Customer Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/customer/customereditpage.jsp"></put-attribute>
+	</definition> 
+
+	<!-- customerlistpage -->
+	<definition name="customerlistpage" extends="base.definition">
+		<put-attribute name="title" value="Customer List"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/customer/customerlistpage.jsp"></put-attribute>
+	</definition>
+	
+	<!-- reportformpage -->
+	<definition name="reportformpage" extends="base.definition">
+		<put-attribute name="title" value="Report Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/reportformpage.jsp"></put-attribute>
+	</definition>
+	
+	<!-- reporteditpage -->
+	<definition name="reporteditpage" extends="base.definition">
+		<put-attribute name="title" value="Report Edit Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/reporteditpage.jsp"></put-attribute>
+	</definition>
+
+	<!-- reportlistpage -->
+	<definition name="reportlistpage" extends="base.definition">
+		<put-attribute name="title" value="Report List"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/reportlistpage.jsp"></put-attribute>
+	</definition>
+
+	<!-- upload -->
+	<definition name="upload" extends="base.definition">
+		<put-attribute name="title" value="Upload Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/upload.jsp"></put-attribute>
+	</definition>
+	
+	<!-- reminderformpage -->
+	<definition name="reminderformpage" extends="base.definition">
+		<put-attribute name="title" value="Reminder Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/reminderformpage.jsp"></put-attribute>
+	</definition>
+	
+	<!-- scheduler -->
+	<definition name="schedulerpage" extends="base.definition">
+		<put-attribute name="title" value="Scheduler"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/schedulerpage.jsp"></put-attribute>
+	</definition>
+	
+	<!-- bases login -->
+	<definition name="base.login" template="/WEB-INF/template/mainTemplate.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value=""></put-attribute>
+		<put-attribute name="menu" value=""></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>
+	
+	<!-- index -->
+	<definition name="index" extends="base.login">
+		<put-attribute name="title" value="Login" ></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
+	</definition>
+	
+	<!-- menu -->
+	<definition name="menu" extends="base.definition">
+		<put-attribute name="title" value="Upload Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/menu.jsp"></put-attribute>
+	</definition>
+	
+	<!-- index -->
+	<definition name="custompopup" extends="base.login">
+		<put-attribute name="title" value="Login" ></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/custompopup.jsp"></put-attribute>
+	</definition>
+
+</tiles-definitions>

@@ -14,5 +14,6 @@
 		<mapping resource="hbm/Ruser.hbm.xml" />
 		<mapping resource="hbm/Rcustomer.hbm.xml" />
 		<mapping resource="hbm/Rdivision.hbm.xml" />
+		<mapping resource="hbm/Remail.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

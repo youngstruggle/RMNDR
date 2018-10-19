@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2018 3:10:04 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="entities.Remail" table="REMAIL" catalog="MYREMINDER">
+        <id name="emailId" type="string">
+            <column name="email_id" length="50" />
+            <generator class="uuid" />
+        </id>
+        <property name="sender" type="string">
+            <column name="sender" length="50" not-null="true" />
+        </property>
+        <property name="recipients" type="string">
+            <column name="recipients" length="50" not-null="true" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" length="50" not-null="true" />
+        </property>
+        <property name="header" type="string">
+            <column name="header" length="50" not-null="true" />
+        </property>
+        <property name="footer" type="string">
+            <column name="footer" length="50" not-null="true" />
+        </property>
+        <property name="contents" type="string">
+            <column name="contents" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

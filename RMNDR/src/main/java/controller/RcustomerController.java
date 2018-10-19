@@ -41,7 +41,7 @@ public class RcustomerController {
 		return model;
 	}
 	
-	/* userdelete */
+	/* customerdelete */
 	@RequestMapping(value = "/customerdelete/{id}", method = RequestMethod.GET)
 	public String customerDeleteForm(@PathVariable("id") String id, RedirectAttributes attributes) {
 		rCustomerServices.deleteCustomer(id);

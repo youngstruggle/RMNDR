@@ -25,6 +25,7 @@
 						<li><a href="${pageContext.request.contextPath}/userlist.html">User Master</a></li>
 						<li><a href="${pageContext.request.contextPath}/customerlist.html">Customer Master</a></li>
 						<li><a href="${pageContext.request.contextPath}/divisionlist.html">Division Master</a></li>
+						<li><a href="${pageContext.request.contextPath}/emailslist.html">Email Master</a></li>
 						<li><a href="${pageContext.request.contextPath}/reportlist.html">Invoice Menu</a></li>
 						<li><a href="${pageContext.request.contextPath}/uploadfile.html">Upload File Menu</a></li>
 						<li><a href="${pageContext.request.contextPath}/sendingemail.html">Reminder Menu</a></li>

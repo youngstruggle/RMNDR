@@ -94,7 +94,6 @@ public class RuserController {
 		return model;
 	}
 	
-	
 	/* useredit */
 	@RequestMapping(value = "/usersedit/{id}")
 	public ModelAndView edit(@PathVariable String id) {

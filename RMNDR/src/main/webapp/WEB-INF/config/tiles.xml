@@ -66,6 +66,24 @@
 		<put-attribute name="body" value="/WEB-INF/views/master/division/divisionlistpage.jsp"></put-attribute>
 	</definition>
 	
+	<!-- emailformpage -->
+	<definition name="emailformpage" extends="base.definition">
+		<put-attribute name="title" value="Email Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/email/emailformpage.jsp"></put-attribute>
+	</definition>
+
+	<!-- emaileditform --> 
+	<definition name="emaileditpage" extends="base.definition">
+		<put-attribute name="title" value="Edit Email Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/email/emaileditpage.jsp"></put-attribute>
+	</definition> 
+
+	<!-- emaillistpage -->
+	<definition name="emaillistpage" extends="base.definition">
+		<put-attribute name="title" value="Email List"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/email/emaillistpage.jsp"></put-attribute>
+	</definition>
+	
 	<!-- reportformpage -->
 	<definition name="reportformpage" extends="base.definition">
 		<put-attribute name="title" value="Report Form"></put-attribute>

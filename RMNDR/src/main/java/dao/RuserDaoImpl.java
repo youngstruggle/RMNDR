@@ -3,7 +3,10 @@ package dao;
 import java.util.List;
 import java.util.UUID;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import util.HibernateUtil;
@@ -16,15 +19,22 @@ import entities.Ruser;
 @Repository
 public class RuserDaoImpl implements RuserDao {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(RcustomerDaoImpl.class);
+	
 	@Override
 	public List<Ruser> getUserList() {
 		List<Ruser> userList = null;
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
 			userList = session.createCriteria(Ruser.class).list();
-		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.debug("Get userlist");
+		} catch (HibernateException e) {
+			session.getTransaction().rollback();
+			LOGGER.error("Error {}", e.getMessage());
+		} finally {
+			session.close();
+			LOGGER.info("Transaction Finish");
 		}
 		return userList;
 	}
@@ -32,83 +42,97 @@ public class RuserDaoImpl implements RuserDao {
 	@Override
 	public Ruser deleteUser(String userId) {
 		Ruser rUser = null;
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
 			 rUser = (Ruser) session.get(Ruser.class, userId);
 			if (rUser != null) {
 				session.delete(rUser);
 				session.getTransaction().commit();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.debug("Data sucessfully deleted!");
+		} catch (HibernateException e) {
+			session.getTransaction().rollback();
+			LOGGER.error("Error Delete {}", e.getMessage());
+		} finally {
+			session.close();
+			LOGGER.info("Transaction selesai");
 		}
 		return rUser;
 	}
 
 	@Override
-	public Ruser createUser(Ruser rUser) {
+	public Ruser createUser(Ruser ruser) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
-			if (rUser != null) {
-				Session session = HibernateUtil.getSessionFactory().openSession();
+			if (ruser != null) {
 				session.beginTransaction();
-//				UUID uuid = UUID.randomUUID();
-//				rUser.setUserId(uuid.toString());
-//				
-//				System.out.println("id " + uuid);
-				System.out.println(rUser.getUserId());
-				System.out.println(rUser.getUsername());
-				session.save(rUser);
+				session.save(ruser);
 				session.getTransaction().commit();
 			} else {
 				System.out.println("Ada yang null!");
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (HibernateException e) {
+			session.getTransaction().rollback();
+			LOGGER.error("Error create {}", e.getMessage());
+		} finally {
+			session.close();
+			LOGGER.info("Transaction End");
 		}
-		
-		return rUser;
+		return ruser;
 	}
 
 	@Override
 	public Ruser getUserById(String userId) {
 		Ruser user = null;
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
 			user = (Ruser) session.get(Ruser.class, userId);
 			session.getTransaction().commit();
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (HibernateException e) {
+			session.getTransaction().rollback();
+			LOGGER.error("Error {}", e.getMessage());
+		} finally {
+			session.close();
+			LOGGER.info("Transaction end");
 		}
 		return user;
 	}
 
 	@Override
-	public Ruser updateUserObj(Ruser rUser) {
+	public Ruser updateUserObj(Ruser ruser) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
-			if (rUser != null) {
-				session.update(rUser);
+			if (ruser != null) {
+				session.update(ruser);
 				session.getTransaction().commit();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (HibernateException e) {
+			session.getTransaction().rollback();
+			LOGGER.error("Error Bung {}", e.getMessage());
+		} finally {
+			session.close();
+			LOGGER.info("Transaction end");
 		}
-		return rUser;
+		return ruser;
 	}
 
 	@Override
 	public List<Ruser> getUserListByQuery(String sql) {
 		List<Ruser> userList = null;
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
-			Session session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
 			userList = session.createQuery(sql).list();
 			session.getTransaction().commit();
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (HibernateException e) {
+			session.getTransaction().rollback();
+			LOGGER.error("Error Bung {}", e.getMessage());
+		} finally {
+			session.close();
+			LOGGER.info("Transaction end");
 		}
 		return userList;
 	}

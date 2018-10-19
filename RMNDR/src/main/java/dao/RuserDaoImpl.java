@@ -1,7 +1,6 @@
 package dao;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

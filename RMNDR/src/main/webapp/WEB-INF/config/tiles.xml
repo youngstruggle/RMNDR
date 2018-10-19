@@ -48,6 +48,24 @@
 		<put-attribute name="body" value="/WEB-INF/views/master/customer/customerlistpage.jsp"></put-attribute>
 	</definition>
 	
+	<!-- divisionformpage -->
+	<definition name="divisionformpage" extends="base.definition">
+		<put-attribute name="title" value="Division Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/division/divisionformpage.jsp"></put-attribute>
+	</definition>
+
+	<!-- divisioneditform --> 
+	<definition name="divisioneditpage" extends="base.definition">
+		<put-attribute name="title" value="Edit Division Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/division/divisioneditpage.jsp"></put-attribute>
+	</definition> 
+
+	<!-- divisionlistpage -->
+	<definition name="divisionlistpage" extends="base.definition">
+		<put-attribute name="title" value="Division List"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/division/divisionlistpage.jsp"></put-attribute>
+	</definition>
+	
 	<!-- reportformpage -->
 	<definition name="reportformpage" extends="base.definition">
 		<put-attribute name="title" value="Report Form"></put-attribute>

@@ -29,7 +29,7 @@ public class RcustomerController {
 
 	/* customerlist */
 	@RequestMapping("/customerlist")
-	public ModelAndView userListView() {
+	public ModelAndView customerListView() {
 		ModelAndView model = new ModelAndView("customerlistpage");
 		try {
 			List<Rcustomer> customerList = rCustomerServices.getCustomerList();
@@ -43,7 +43,7 @@ public class RcustomerController {
 	
 	/* userdelete */
 	@RequestMapping(value = "/customerdelete/{id}", method = RequestMethod.GET)
-	public String userDeleteForm(@PathVariable("id") String id, RedirectAttributes attributes) {
+	public String customerDeleteForm(@PathVariable("id") String id, RedirectAttributes attributes) {
 		rCustomerServices.deleteCustomer(id);
 		attributes.addFlashAttribute("msgdelete", "User has been removed successfully.");
 		return "redirect:/customerlist";
@@ -51,13 +51,13 @@ public class RcustomerController {
 	
 	/* customercreate */
 	@RequestMapping(value = "/createcustomerform", method = RequestMethod.GET)
-	public ModelAndView createUser() {
+	public ModelAndView createCustomer() {
 		return new ModelAndView("customerformpage", "rcustomer", new Rcustomer());
 	}
 	
 	/* customercreate */
 	@RequestMapping(value = "/submitcustomerform.html", method = RequestMethod.POST)
-	public ModelAndView createUserForm(@ModelAttribute("rcustomer") @Valid Rcustomer rcustomer,
+	public ModelAndView createCustomerForm(@ModelAttribute("rcustomer") @Valid Rcustomer rcustomer,
 			BindingResult result, RedirectAttributes redirectAttr ) {
 		ModelAndView model = null;
 		try {
@@ -76,14 +76,14 @@ public class RcustomerController {
 	
 	/* customeredit */
 	@RequestMapping(value = "/customeredit/{id}")
-	public ModelAndView edit(@PathVariable String id) {
+	public ModelAndView editCustomer(@PathVariable String id) {
 		Rcustomer customer = rCustomerServices.getCustomerById(id);
 		return new ModelAndView("customereditpage", "rcustomer", customer);
 	}
 
 	/* customeredit */
 	@RequestMapping(value = "/submitcustomeredit", method = RequestMethod.POST)
-	public ModelAndView editsave(@ModelAttribute("rcustomer") Rcustomer rcustomer, BindingResult result) {
+	public ModelAndView editSaveCustomer(@ModelAttribute("rcustomer") Rcustomer rcustomer, BindingResult result) {
 		ModelAndView model = null;
 		try {
 			if (result.hasErrors()) {

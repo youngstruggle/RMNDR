@@ -3,7 +3,6 @@ package dao;
 import java.util.List;
 
 import entities.Rcustomer;
-import entities.Ruser;
 
 /**
  * @author Nana Febriana

@@ -9,23 +9,22 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import util.HibernateUtil;
-import entities.Rcustomer;
+import entities.Rdivision;
 
 @Repository
-public class RcustomerDaoImpl implements RcustomerDao {
+public class RdivisionDaoImpl implements RdivisionDao {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(RcustomerDaoImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(RdivisionDaoImpl.class);
 
 	@Override
-	public List<Rcustomer> getCustomerList() {
-		List<Rcustomer> customerlist = null;
+	public List<Rdivision> getDivisionList() {
+		List<Rdivision> divisionlist = null;
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
 			session.beginTransaction();
-			customerlist = session.createCriteria(Rcustomer.class).list();
+			divisionlist = session.createCriteria(Rdivision.class).list();
 			session.getTransaction().commit();
-			LOGGER.debug("Get customer");
-			
+			LOGGER.debug("Get divisionlist");
 		} catch (HibernateException e) {
 			session.getTransaction().rollback();
 			LOGGER.error("Error Bung {}", e.getMessage());
@@ -33,18 +32,18 @@ public class RcustomerDaoImpl implements RcustomerDao {
 			session.close();
 			LOGGER.info("Transaction Finish");
 		}
-		return customerlist;
+		return divisionlist;
 	}
 
 	@Override
-	public Rcustomer deleteCustomer(String customerId) {
-		Rcustomer customer = null;
+	public Rdivision deleteDivision(String divisionid) {
+		Rdivision division = null;
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
 			session.beginTransaction();
-			customer = (Rcustomer) session.get(Rcustomer.class, customerId);
-			if (customer != null) {
-				session.delete(customer);
+			division = (Rdivision) session.get(Rdivision.class, divisionid);
+			if (division != null) {
+				session.delete(division);
 				session.getTransaction().commit();
 			}
 			LOGGER.debug("Data sucessfully deleted!");
@@ -55,16 +54,16 @@ public class RcustomerDaoImpl implements RcustomerDao {
 			session.close();
 			LOGGER.info("Transaction selesai");
 		}
-		return customer;
+		return division;
 	}
 
 	@Override
-	public Rcustomer createCustomer(Rcustomer customer) {
+	public Rdivision createDivision(Rdivision rdivision) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
-			if (customer != null) {
+			if (rdivision != null) {
 				session.beginTransaction();
-				session.save(customer);
+				session.save(rdivision);
 				session.getTransaction().commit();
 				LOGGER.debug("Data sucessfully created!");
 			} else {
@@ -77,36 +76,35 @@ public class RcustomerDaoImpl implements RcustomerDao {
 			session.close();
 			LOGGER.info("Transaction End");
 		}
-		return customer;
+		return rdivision;
 	}
 
 	@Override
-	public Rcustomer getCustomerById(String userId) {
-		Rcustomer customer = null;
+	public Rdivision getDivisionById(String divisionid) {
+		Rdivision division = null;
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
 			session.beginTransaction();
-			customer = (Rcustomer) session.get(Rcustomer.class, userId);
+			division = (Rdivision) session.get(Rdivision.class, divisionid);
 			session.getTransaction().commit();
-			LOGGER.debug("Get customer Byid");		
-
+			LOGGER.debug("Get division Byid");		
 		} catch (HibernateException e) {
 			session.getTransaction().rollback();
-			LOGGER.error("Error Bung {}", e.getMessage());
+			LOGGER.error("Error {}", e.getMessage());
 		} finally {
 			session.close();
 			LOGGER.info("Transaction end");
 		}
-		return customer;
+		return division;
 	}
 
 	@Override
-	public Rcustomer updateCustomerObj(Rcustomer customer) {
+	public Rdivision updateDivisionObj(Rdivision rdivision) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
 			session.beginTransaction();
-			if (customer != null) {
-				session.update(customer);
+			if (rdivision != null) {
+				session.update(rdivision);
 				session.getTransaction().commit();
 				LOGGER.debug("Data succesfully updated");
 			}
@@ -117,16 +115,16 @@ public class RcustomerDaoImpl implements RcustomerDao {
 			session.close();
 			LOGGER.info("Transaction end");
 		}
-		return customer;
+		return rdivision;
 	}
 
 	@Override
-	public List<Rcustomer> getCustomerListByQuery(String sql) {
+	public List<Rdivision> getDivisionListByQuery(String sql) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		List<Rcustomer> customerlist = null;
+		List<Rdivision> divisionlist = null;
 		try {
 			session.beginTransaction();
-			customerlist = session.createQuery(sql).list();
+			divisionlist = session.createQuery(sql).list();
 			session.getTransaction().commit();
 		} catch (HibernateException e) {
 			session.getTransaction().rollback();
@@ -135,6 +133,6 @@ public class RcustomerDaoImpl implements RcustomerDao {
 			session.close();
 			LOGGER.info("Transaction end");
 		}
-		return customerlist;
+		return divisionlist;
 	}
 }

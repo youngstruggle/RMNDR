@@ -72,7 +72,7 @@ public class RcustomerDaoImpl implements RcustomerDao {
 			}
 		} catch (HibernateException e) {
 			session.getTransaction().rollback();
-			LOGGER.error("Error Delete {}", e.getMessage());
+			LOGGER.error("Error {}", e.getMessage());
 		} finally {
 			session.close();
 			LOGGER.info("Transaction End");

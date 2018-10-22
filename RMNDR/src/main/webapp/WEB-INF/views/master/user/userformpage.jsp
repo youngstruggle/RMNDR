@@ -44,8 +44,8 @@
 							method="post" class="well form-horizontal">
 							<fieldset>
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="username">Username</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label" for="username">Username</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:errors path="username" cssClass="error" />
 										</div>
@@ -56,8 +56,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="firstName">First Name</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label" for="firstName">First Name</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:errors path="firstName" cssClass="error" />
 										</div>
@@ -68,8 +68,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="lastName">Last Name</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label" for="lastName">Last Name</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:errors path="lastName" cssClass="error" />
 										</div>
@@ -80,8 +80,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="emailAddress">Email</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label" for="emailAddress">Email</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:errors path="emailAddress" cssClass="error" />
 										</div>
@@ -92,8 +92,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="password">Password</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label" for="password">Password</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:errors path="password" cssClass="error" />
 										</div>
@@ -104,8 +104,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="division">Division</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label" for="division">Division</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:input autocomplete="off" class="form-control"
 												path="division" id="division" placeholder="Division" />
@@ -114,8 +114,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-4 control-label">Role</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label">Role</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:checkbox path="role" value="Y" />
 											<s:errors path="role" />
@@ -123,8 +123,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-4 control-label"></label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label"></label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<input type="submit" value="Create" class="btn btn-primary" />
 										</div>

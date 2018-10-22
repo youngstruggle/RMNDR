@@ -44,8 +44,8 @@
 							method="post" class="well form-horizontal">
 							<fieldset>
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="divisionName">Division Name</label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label" for="divisionName">Division Name</label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<s:errors path="divisionName" cssClass="error" />
 										</div>
@@ -57,8 +57,8 @@
 								</div>
 								
 								<div class="form-group">
-									<label class="col-md-4 control-label"></label>
-									<div class="col-md-8 inputGroupContainer">
+									<label class="col-md-2 control-label"></label>
+									<div class="col-md-10 inputGroupContainer">
 										<div class="input-group">
 											<input type="submit" value="Create" class="btn btn-primary" />
 										</div>

@@ -16,7 +16,7 @@
 <!-- Begin Bootstrap -->
 <link href="${pageContext.request.contextPath}/webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet" />
-<link href="${pageContext.request.contextPath}/resources/css/cssreset.css" rel="stylesheet" />
+<!-- <link href="${pageContext.request.contextPath}/resources/css/cssreset.css" rel="stylesheet" /> -->
 
 <!-- JQuery -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -28,7 +28,7 @@
 
 <body>
 
-	<div class="custom-container">
+	<div class="container">
 		<div class="panel panel-primary">
 			<div class="panel-heading">SCHEDULER</div>
 		</div>

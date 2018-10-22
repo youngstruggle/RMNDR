@@ -13,9 +13,9 @@
 	rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/main.css"
 	rel="stylesheet" />
-<link
+<!-- <link
 	href="${pageContext.request.contextPath}/resources/css/cssreset.css"
-	rel="stylesheet" />
+	rel="stylesheet" /> -->
 
 <!-- JQuery -->
 <script type="text/javascript"
@@ -79,7 +79,7 @@
 	<h1>${headerMessage}</h1>
 	<!-- <s:errors path="reports.*" /> -->
 
-	<div class="custom-container">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-primary">

@@ -32,12 +32,26 @@ public class LoginController {
 	} */
 	
 	/* Example Form */
-	@RequestMapping("/exampleform")
+	@RequestMapping("/sidebarmenu")
 	public ModelAndView userListView() {
-		ModelAndView model = new ModelAndView("formdetail");
+		ModelAndView model = new ModelAndView("sidebarmenu");
 		return model;
 	}
-
+	
+	/* Example Form */
+	@RequestMapping("/sidebarmenuexample")
+	public ModelAndView sideBarMenuExample() {
+		ModelAndView model = new ModelAndView("sidebarmenuexample");
+		return model;
+	}
+	
+	/* Example Form */
+	@RequestMapping("/sidebarexample")
+	public ModelAndView sidebarexample() {
+		ModelAndView model = new ModelAndView("sidebarexample");
+		return model;
+	}
+	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(ModelMap modelmap, HttpSession session, HttpServletRequest request) {
 		Ruser ruser = checkCookie(request);

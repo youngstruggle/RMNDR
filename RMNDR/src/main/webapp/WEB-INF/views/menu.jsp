@@ -19,25 +19,22 @@
 		<div class="sidebar-menu">
 			<div class="side-in">
 				<figure class="logo"> <img src="" alt="image view" class="img-responsive"> Logo </figure> 
-				
 				<div class="side-menu">
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/userlist.html">User Master</a></li>
-						<li><a href="${pageContext.request.contextPath}/customerlist.html">Customer Master</a></li>
-						<li><a href="${pageContext.request.contextPath}/divisionlist.html">Division Master</a></li>
-						<li><a href="${pageContext.request.contextPath}/emailslist.html">Email Master</a></li>
-						<li><a href="${pageContext.request.contextPath}/reportlist.html">Invoice Menu</a></li>
-						<li><a href="${pageContext.request.contextPath}/uploadfile.html">Upload File Menu</a></li>
-						<li><a href="${pageContext.request.contextPath}/sendingemail.html">Reminder Menu</a></li>
-						<li><a href="${pageContext.request.contextPath}/scheduler.html">Scheduler</a></li>
+						<li><a href="${pageContext.request.contextPath}/userlist.html">User</a></li>
+						<li><a href="${pageContext.request.contextPath}/customerlist.html">Customer</a></li>
+						<li><a href="${pageContext.request.contextPath}/divisionlist.html">Division</a></li>
+						<li><a href="${pageContext.request.contextPath}/emailslist.html">Email</a></li>
+						<li><a href="${pageContext.request.contextPath}/reportlist.html"><span>Invoice</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/uploadfile.html"><span>Upload</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/sendingemail.html"><span>Reminder</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/scheduler.html"><span>Scheduler</span></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div> <!-- End Wrapper -->
 
-	<script src="${pageContext.request.contextPath}/webjars/jquery/1.9.1/jquery.min.js"></script>
-	<script src="${pageContext.request.contextPath}/webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 </html>

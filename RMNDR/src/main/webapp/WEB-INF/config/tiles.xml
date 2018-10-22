@@ -12,6 +12,24 @@
 		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp"></put-attribute>
 	</definition>
 
+	<!-- ui -->
+	<definition name="sidebarexample" extends="base.login">
+		<put-attribute name="title" value="Side Bar Example"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/ui/sidebarexample.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ui -->
+	<definition name="sidebarmenu" extends="base.login">
+		<put-attribute name="title" value="Side Bar Menu"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/ui/sidebarmenu.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ui -->
+	<definition name="sidebarmenuexample" extends="base.login">
+		<put-attribute name="title" value="Side Bar Menu Example"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/master/ui/sidebarmenuexample.jsp"></put-attribute>
+	</definition>
+
 	<!-- userformpage -->
 	<definition name="userformpage" extends="base.definition">
 		<put-attribute name="title" value="Create User Form"></put-attribute>

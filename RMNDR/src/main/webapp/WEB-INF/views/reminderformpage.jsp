@@ -11,9 +11,9 @@
 	rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/main.css"
 	rel="stylesheet" />
-<link
+<!-- <link
 	href="${pageContext.request.contextPath}/resources/css/cssreset.css"
-	rel="stylesheet" />
+	rel="stylesheet" /> -->
 
 <!-- JQuery -->
 <script type="text/javascript"
@@ -35,7 +35,7 @@
 </head>
 <body>
 
-	<div class="custom-container">
+	<div class="container">
 		<div class="panel panel-primary">
 			<div class="panel-heading">SENDING EMAIL</div>
 		</div>

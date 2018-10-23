@@ -14,16 +14,16 @@
 						http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
 	<context:annotation-config/>
-	<context:component-scan base-package="dao"/>
-	<context:component-scan base-package="services"/>
-	<context:component-scan base-package="auth"/>
-	<context:component-scan base-package="controller"/>
+	<context:component-scan base-package="com.nana.dao"/>
+	<context:component-scan base-package="com.nana.services"/>
+	<context:component-scan base-package="com.nana.auth"/>
+	<context:component-scan base-package="com.nana.controller"/>
 	
 	<!--  
-	<bean id="LoginController" class="controller.LoginController"></bean>
-	<bean id="RUserController" class="controller.RuserController" ></bean> 
-	<bean id="TrReportsController" class="controller.TrReportsController" ></bean> 
-	<bean id="FilesUploadController" class="controller.UploadController" ></bean> -->
+	<bean id="LoginController" class="com.nana.controller.LoginController"></bean>
+	<bean id="RUserController" class="com.nana.controller.RuserController" ></bean> 
+	<bean id="TrReportsController" class="com.nana.controller.TrReportsController" ></bean> 
+	<bean id="FilesUploadController" class="com.nana.controller.UploadController" ></bean> -->
 	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">

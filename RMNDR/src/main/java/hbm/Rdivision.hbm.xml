@@ -3,7 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated Oct 19, 2018 10:53:26 AM by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
-    <class name="entities.Rdivision" table="RDIVISION" catalog="MYREMINDER">
+    <class name="com.nana.entities.Rdivision" table="RDIVISION" catalog="MYREMINDER">
         <id name="divisionId" type="string">
             <column name="division_id" length="50" />
             <generator class="uuid" />

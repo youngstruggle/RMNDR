@@ -3,7 +3,7 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Sep 14, 2018 9:17:09 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping schema="dbo">
-	<class name="entities.FilesUpload" table="FILES_UPLOAD">
+	<class name="com.nana.entities.FilesUpload" table="FILES_UPLOAD">
 		<id name="uploadId" type="int">
 			<column name="upload_id" />
 			<generator class="native" />

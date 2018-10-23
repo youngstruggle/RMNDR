@@ -28,6 +28,10 @@
 <body>
 
 	<div class="sidenav">
+		<a href="${pageContext.request.contextPath}/reportlist.html">
+			Invoice</a> <a href="${pageContext.request.contextPath}/uploadfile.html">Upload</a>
+		<a href="${pageContext.request.contextPath}/sendingemail.html">Reminder</a>
+		<a href="${pageContext.request.contextPath}/scheduler.html">Scheduler</a>
 		<button class="dropdown-btn">
 			Master Data <i class="fa fa-caret-down"></i>
 		</button>
@@ -37,10 +41,6 @@
 			<a href="${pageContext.request.contextPath}/divisionlist.html">Division</a>
 			<a href="${pageContext.request.contextPath}/emailslist.html">Email</a>
 		</div>
-		<a href="${pageContext.request.contextPath}/reportlist.html">
-			Invoice</a> <a href="${pageContext.request.contextPath}/uploadfile.html">Upload</a>
-		<a href="${pageContext.request.contextPath}/sendingemail.html">Reminder</a>
-		<a href="${pageContext.request.contextPath}/scheduler.html">Scheduler</a>
 	</div>
 	<!-- End Wrapper -->
 

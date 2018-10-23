@@ -26,7 +26,7 @@
 </head>
 <body>
 	<div class="sidenav">
-		<a href="#about">About</a> <a href="#services">Services</a> <a
+		<a href="#about">About</a> <a href="#com.nana.services">Services</a> <a
 			href="#clients">Clients</a> <a href="#contact">Contact</a>
 		<button class="dropdown-btn">
 			Dropdown <i class="fa fa-caret-down"></i>

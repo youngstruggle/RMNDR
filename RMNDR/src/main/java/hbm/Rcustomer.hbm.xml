@@ -3,7 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated Oct 18, 2018 5:27:00 PM by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
-    <class name="entities.Rcustomer" table="RCUSTOMER" catalog="MYREMINDER">
+    <class name="com.nana.entities.Rcustomer" table="RCUSTOMER" catalog="MYREMINDER">
         <id name="customerId" type="string">
             <column name="customer_id" />
             <generator class="uuid" />
